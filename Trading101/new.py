@@ -11,7 +11,7 @@ mt5.initialize()
 status = 'open'
 symbols = mt5.symbols_get()
 
-price = mt5.symbol_info_tick('EURUSD')
+price = mt5.symbol_info_tick('EURUSD') # Make a choice of your currency pair
 print(datetime.fromtimestamp(price.time))
 print(price.bid)
 
@@ -19,7 +19,7 @@ print(price.bid)
 class SupportResistance:
     def __init__(self):
         self.status = None
-        self.symbol = 'EURUSD'
+        self.symbol = 'EURUSD' # Use the currency pair you have chosen
         self.year = int(str(datetime.now())[:-22])
         self.month = int(str(datetime.now())[5:-19])
         self.day = int(str(datetime.now())[8:-16])
@@ -90,7 +90,7 @@ class SupportResistance:
         pass
 
     def analysis(self):
-        lines = []
+        lines = [] # Enter the value of support and resistance lines here
         lines = sorted(lines)
         lines_btn = []
         iterator = 0
